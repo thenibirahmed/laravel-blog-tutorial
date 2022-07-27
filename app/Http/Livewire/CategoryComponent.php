@@ -89,7 +89,7 @@ class CategoryComponent extends Component {
 
     public function render() {
         return view( 'livewire.category-component', [
-            'categories' => Category::paginate( 15 ),
+            'categories' => Category::latest()->paginate( 15 ),
         ] );
     }
 }

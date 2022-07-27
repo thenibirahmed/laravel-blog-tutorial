@@ -70,7 +70,7 @@ class TagComponent extends Component {
 
     public function render() {
         return view( 'livewire.tag-component',[
-            'tags' => Tag::paginate(15),
+            'tags' => Tag::latest()->paginate(15),
         ] );
     }
 }

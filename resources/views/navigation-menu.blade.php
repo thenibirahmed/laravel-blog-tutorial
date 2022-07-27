@@ -39,7 +39,7 @@
                     {{ __('File Manager') }}
                 </x-jet-nav-link>
                 
-                <x-jet-nav-link class="mx-2" href="#" :active="request()->routeIs('sms')">
+                <x-jet-nav-link class="mx-2" href="{{ route('sms') }}" :active="request()->routeIs('sms')">
                     {{ __('SMS') }}
                 </x-jet-nav-link>
 
@@ -114,6 +114,10 @@
                                 {{ __('Manage Account') }}
                             </h6>
 
+                            <x-jet-dropdown-link href="{{ url('/') }}">
+                                {{ __('Go to blog') }}
+                            </x-jet-dropdown-link>
+                            
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>

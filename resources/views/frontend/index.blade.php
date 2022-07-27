@@ -25,6 +25,7 @@
                     <!-- Post preview-->
                     <div class="post-preview">
                         <a href="{{ route('post.show',[ 'slug' => $post->slug ]) }}">
+                            <img style="width: 100%; height: 350px" src="{{ $post->featured_image ? Storage::url($post->featured_image) : asset('assets/assets/img/home-bg.jpg') }}" alt="">
                             <h2 class="post-title">{{ $post->title }}</h2>
                             <h3 class="post-subtitle">{!! Str::words($post->description,10) !!}</h3>
                         </a>
